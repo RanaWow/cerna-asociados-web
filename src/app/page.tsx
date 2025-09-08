@@ -151,7 +151,6 @@ export default function Page() {
       <section id="casos" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="max-w-3xl">
           <h2 className="text-3xl font-bold tracking-tight">Experiencia y casos</h2>
-          <p className="mt-3 text-slate-300">Algunos tipos de asuntos que hemos abordado (sin revelar información sensible):</p>
         </div>
         <div className="mt-8 grid md:grid-cols-3 gap-6">
           <CaseCard title="Tutela laboral y despidos" text="Defensas y demandas por vulneración de derechos fundamentales y despidos indebidos." />
@@ -229,6 +228,28 @@ export default function Page() {
           © {new Date().getFullYear()} Cerna &amp; Asociados. Todos los derechos reservados.
         </div>
       </footer>
+
+      {/* ===== BOTÓN FLOTANTE WHATSAPP ===== */}
+      <a
+        href="https://wa.me/56961946929?text=Hola%2C%20quiero%20hacer%20una%20consulta"
+        className="fixed bottom-5 right-5 h-14 w-14 rounded-full bg-[#25D366] text-white shadow-lg flex items-center justify-center hover:bg-[#128C7E] focus:outline-none focus:ring-2 focus:ring-white/30 transition-colors"
+        target="_blank"
+        rel="noopener"
+        aria-label="Escríbenos por WhatsApp"
+        title="WhatsApp"
+      >
+        {/* Ícono WhatsApp (SVG inline, color blanco) */}
+        <svg
+          viewBox="0 0 32 32"
+          aria-hidden="true"
+          className="h-7 w-7"
+          fill="currentColor"
+        >
+          <path d="M19.11 17.39c-.3-.15-1.73-.85-2-.95s-.46-.15-.65.15-.75.95-.92 1.15-.34.22-.63.07a6.63 6.63 0 0 1-1.95-1.2 7.3 7.3 0 0 1-1.35-1.67c-.14-.23 0-.36.1-.5s.23-.27.34-.42a1.65 1.65 0 0 0 .22-.37.45.45 0 0 0 0-.42c0-.15-.64-1.56-.88-2.13s-.47-.5-.65-.5h-.55a1 1 0 0 0-.73.34 3.06 3.06 0 0 0-.96 2.27 5.31 5.31 0 0 0 1.11 2.84 12.12 12.12 0 0 0 4.64 4.18 15.86 15.86 0 0 0 1.58.58 3.8 3.8 0 0 0 1.74.11 2.83 2.83 0 0 0 1.86-1.31 2.33 2.33 0 0 0 .16-1.31c-.05-.08-.24-.15-.54-.3zM16.02 3.2A12.79 12.79 0 0 0 3.2 15.99a12.6 12.6 0 0 0 1.74 6.42L3 29l6.76-1.78a12.86 12.86 0 0 0 6.25 1.6h.01a12.79 12.79 0 0 0 12.79-12.79A12.72 12.72 0 0 0 16.02 3.2zm7.54 20.33a10.86 10.86 0 0 1-7.55 3.13h-.01a10.94 10.94 0 0 1-5.56-1.5l-.4-.24-4.01 1.05 1.07-3.91-.26-.4a10.93 10.93 0 0 1-1.68-5.81 10.88 10.88 0 0 1 18.57-7.68 10.73 10.73 0 0 1 3.15 7.54 10.85 10.85 0 0 1-3.32 7.22z" />
+        </svg>
+        <span className="sr-only">Abrir WhatsApp</span>
+      </a>
+      {/* ===== FIN BOTÓN FLOTANTE WHATSAPP ===== */}
     </div>
   );
 }
