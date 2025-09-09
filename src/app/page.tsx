@@ -56,19 +56,17 @@ export default function Page() {
               <h1 className="text-4xl sm:text-5xl font-bold leading-tight tracking-tight">
                 Tu defensa y asesoría legal con confianza y resultados
                 <span className="block text-blue-400">
-                  Laboral · Administrativo · Societario · Civil &amp; Ejecutivo · Corretaje
+                  Laboral · Administrativo · Societario · Civil y Ejecutivo · Corretaje
                 </span>
               </h1>
-              <p className="mt-4 text-slate-300 text-lg">
-                Representamos y asesoramos a personas y empresas en
-                <strong> juicios laborales</strong>, <strong>procedimientos administrativos</strong>,
-                <strong> licitaciones públicas</strong>, <strong>litigios judiciales</strong>,
-                <strong> constitución de sociedades</strong> y <strong> corretaje de propiedades</strong>.
-                También abordamos <strong>juicios civiles y ejecutivos</strong>, como
-                <strong> cobro de facturas</strong>, <strong>término de contratos de arriendo</strong> y <strong>desalojos</strong>.
-                Nuestro compromiso: <strong>respuestas oportunas</strong>, <strong>estrategia sólida</strong> y
-                <strong> acompañamiento cercano</strong> en cada etapa.
+
+              {/* Párrafo resumido y justificado */}
+              <p className="mt-4 text-slate-300 text-lg text-justify">
+                Representamos a personas y empresas en <strong>juicios laborales, administrativos, civiles y ejecutivos</strong>. 
+                También asesoramos en <strong>licitaciones públicas, constitución de sociedades y corretaje de propiedades</strong>. 
+                Nuestro compromiso: <strong>respuestas oportunas, estrategia sólida y acompañamiento cercano</strong>.
               </p>
+
               <div className="mt-6 flex flex-wrap gap-3">
                 <a href="#contacto" className="inline-flex items-center rounded-2xl bg-blue-500 px-4 py-2 text-sm font-medium hover:bg-blue-600 transition">
                   Agenda tu consulta legal
@@ -77,6 +75,7 @@ export default function Page() {
                   Conoce nuestras áreas de práctica
                 </a>
               </div>
+
               <div className="mt-6 flex items-center gap-6 text-sm text-slate-400">
                 <div className="flex items-center gap-2"><ShieldCheck className="h-4 w-4" /> Estrategia con sustento legal</div>
                 <div className="flex items-center gap-2"><Clock className="h-4 w-4" /> Respuesta oportuna</div>
@@ -91,8 +90,9 @@ export default function Page() {
                   <div className="grid sm:grid-cols-2 gap-4">
                     <MiniFeature icon={<Gavel className="h-5 w-5" />} title="Derecho Laboral" text="Despidos, tutela de derechos fundamentales, prácticas antisindicales y negociación." />
                     <MiniFeature icon={<Building2 className="h-5 w-5" />} title="Derecho Administrativo" text="Sumarios, estatutos (APS, Docente, Asistentes), probidad y responsabilidad." />
+                    {/* Cambiado: Litigios Civiles y Ejecutivos */}
+                    <MiniFeature icon={<Scale className="h-5 w-5" />} title="Litigios Civiles y Ejecutivos" text="Defensa en tribunales civiles; cobros ejecutivos, desalojos y medidas precautorias." />
                     <MiniFeature icon={<FileText className="h-5 w-5" />} title="Contratación Pública" text="Bases, licitaciones, impugnaciones y cumplimiento contractual." />
-                    <MiniFeature icon={<Scale className="h-5 w-5" />} title="Litigios" text="Presentaciones, recursos y defensa en tribunales." />
                     <MiniFeature icon={<Briefcase className="h-5 w-5" />} title="Empresas y Sociedades" text="Constitución, estatutos, actas y asesoría societaria." />
                     <MiniFeature icon={<Home className="h-5 w-5" />} title="Corretaje de Propiedades" text="Promesas, compraventas y gestión notarial/CBR." />
                   </div>
@@ -107,17 +107,20 @@ export default function Page() {
       <section id="areas" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="max-w-3xl">
           <h2 className="text-3xl font-bold tracking-tight">Áreas de práctica</h2>
-          <p className="mt-3 text-slate-300">Experiencia en el mundo del trabajo, sector público administrativo y servicios legales integrales en Chile.</p>
+          <p className="mt-3 text-slate-300">
+            Experiencia en el mundo del trabajo, sector público administrativo, litigios civiles y ejecutivos,
+            y servicios legales integrales en Chile.
+          </p>
         </div>
         <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <PracticeCard icon={<Gavel className="h-6 w-6" />} title="Laboral: individual y colectivo" bullets={["Despidos y cobros laborales", "Tutela de derechos fundamentales (Ley Karin)", "Reglamento interno y jornadas", "Negociación y relaciones colectivas"]} />
           <PracticeCard icon={<Building2 className="h-6 w-6" />} title="Derecho Administrativo" bullets={["Sumarios y vistas fiscales", "Estatutos: APS, Docente, Asistentes", "Probidad, incompatibilidades y sanciones", "Contraloría y recursos administrativos"]} />
           <PracticeCard icon={<FileText className="h-6 w-6" />} title="Contratación Pública" bullets={["Bases y anexos", "Evaluación y adjudicación", "Impugnaciones y reclamos", "Ejecución y término anticipado"]} />
           <PracticeCard icon={<Scale className="h-6 w-6" />} title="Litigación" bullets={["Juzgados del Trabajo", "Tribunales Contencioso-Adm.", "Recursos de protección", "SUSESO, DT y órganos fiscalizadores"]} />
-          {/* NUEVA TARJETA: Civil & Ejecutivo */}
+          {/* Cambiado: "Civil y Ejecutivo" (sin &) */}
           <PracticeCard
             icon={<Scale className="h-6 w-6" />}
-            title="Civil & Ejecutivo"
+            title="Civil y Ejecutivo"
             bullets={[
               "Cobro de facturas y títulos ejecutivos",
               "Término de contratos de arriendo",
@@ -165,6 +168,8 @@ export default function Page() {
               </p>
               <p className="flex items-center gap-2"><MapPin className="h-4 w-4" /> Rancagua / Chile (online y presencial)</p>
               <p className="flex items-center gap-2"><Clock className="h-4 w-4" /> L–V 09:00 a 18:00</p>
+              {/* Corregido: "Sujeto" con mayúscula */}
+              <p className="text-sm text-slate-400">Sujeto a secreto profesional.</p>
             </div>
           </div>
         </div>
@@ -213,7 +218,7 @@ export default function Page() {
             </form>
           </div>
           <div className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6 text-slate-300 space-y-3">
-            <p>• Tratamiento de datos personales conforme a Ley 19.628.<br />• Cookies y analítica con consentimiento informado.<br />• sujeto a secreto profesional.<br />• Honorarios a convenir.</p>
+            <p>• Tratamiento de datos personales conforme a Ley 19.628.<br />• Cookies y analítica con consentimiento informado.<br />• Honorarios a convenir.</p>
             <div className="text-sm text-slate-400">*Este sitio es informativo y no constituye asesoría legal. Cada caso requiere análisis específico.</div>
           </div>
         </div>
