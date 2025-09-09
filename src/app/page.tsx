@@ -54,16 +54,28 @@ export default function Page() {
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
               <h1 className="text-4xl sm:text-5xl font-bold leading-tight tracking-tight">
-                Defensa y asesoría estratégica
-                <span className="block text-blue-400">Laboral, Administrativo, Sociedades &amp; Corretaje</span>
+                Tu defensa y asesoría legal con confianza y resultados
+                <span className="block text-blue-400">
+                  Laboral · Administrativo · Societario · Civil &amp; Ejecutivo · Corretaje
+                </span>
               </h1>
               <p className="mt-4 text-slate-300 text-lg">
-                Acompañamos a personas y empresas en juicios laborales, procedimientos administrativos, contratación pública, litigios,
-                <strong> constitución de sociedades</strong> y <strong> corretaje de propiedades</strong> con respaldo jurídico integral.
+                Representamos y asesoramos a personas y empresas en
+                <strong> juicios laborales</strong>, <strong>procedimientos administrativos</strong>,
+                <strong> licitaciones públicas</strong>, <strong>litigios judiciales</strong>,
+                <strong> constitución de sociedades</strong> y <strong> corretaje de propiedades</strong>.
+                También abordamos <strong>juicios civiles y ejecutivos</strong>, como
+                <strong> cobro de facturas</strong>, <strong>término de contratos de arriendo</strong> y <strong>desalojos</strong>.
+                Nuestro compromiso: <strong>respuestas oportunas</strong>, <strong>estrategia sólida</strong> y
+                <strong> acompañamiento cercano</strong> en cada etapa.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
-                <a href="#contacto" className="inline-flex items-center rounded-2xl bg-blue-500 px-4 py-2 text-sm font-medium hover:bg-blue-600 transition">Agenda una reunión</a>
-                <a href="#areas" className="inline-flex items-center rounded-2xl border border-slate-700 px-4 py-2 text-sm font-medium text-slate-200 hover:bg-slate-900/60 transition">Ver áreas de práctica</a>
+                <a href="#contacto" className="inline-flex items-center rounded-2xl bg-blue-500 px-4 py-2 text-sm font-medium hover:bg-blue-600 transition">
+                  Agenda tu consulta legal
+                </a>
+                <a href="#areas" className="inline-flex items-center rounded-2xl border border-slate-700 px-4 py-2 text-sm font-medium text-slate-200 hover:bg-slate-900/60 transition">
+                  Conoce nuestras áreas de práctica
+                </a>
               </div>
               <div className="mt-6 flex items-center gap-6 text-sm text-slate-400">
                 <div className="flex items-center gap-2"><ShieldCheck className="h-4 w-4" /> Estrategia con sustento legal</div>
@@ -102,6 +114,17 @@ export default function Page() {
           <PracticeCard icon={<Building2 className="h-6 w-6" />} title="Derecho Administrativo" bullets={["Sumarios y vistas fiscales", "Estatutos: APS, Docente, Asistentes", "Probidad, incompatibilidades y sanciones", "Contraloría y recursos administrativos"]} />
           <PracticeCard icon={<FileText className="h-6 w-6" />} title="Contratación Pública" bullets={["Bases y anexos", "Evaluación y adjudicación", "Impugnaciones y reclamos", "Ejecución y término anticipado"]} />
           <PracticeCard icon={<Scale className="h-6 w-6" />} title="Litigación" bullets={["Juzgados del Trabajo", "Tribunales Contencioso-Adm.", "Recursos de protección", "SUSESO, DT y órganos fiscalizadores"]} />
+          {/* NUEVA TARJETA: Civil & Ejecutivo */}
+          <PracticeCard
+            icon={<Scale className="h-6 w-6" />}
+            title="Civil & Ejecutivo"
+            bullets={[
+              "Cobro de facturas y títulos ejecutivos",
+              "Término de contratos de arriendo",
+              "Desalojos y lanzamiento",
+              "Juicios declarativos y monitorios"
+            ]}
+          />
           <PracticeCard icon={<Briefcase className="h-6 w-6" />} title="Empresas y Sociedades" bullets={["Constitución de sociedades", "Redacción de estatutos", "Asesoría societaria y actas", "Modificaciones y disoluciones"]} />
           <PracticeCard icon={<Home className="h-6 w-6" />} title="Corretaje de propiedades" bullets={["Búsqueda y negociación asistida", "Estudio de títulos y due diligence", "Promesa de compraventa", "Contrato de compraventa", "Gestión notarial y CBR"]} />
         </div>
@@ -151,6 +174,7 @@ export default function Page() {
       <section id="casos" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="max-w-3xl">
           <h2 className="text-3xl font-bold tracking-tight">Experiencia y casos</h2>
+          <p className="mt-3 text-slate-300">Algunos tipos de asuntos que hemos abordado (sin revelar información sensible):</p>
         </div>
         <div className="mt-8 grid md:grid-cols-3 gap-6">
           <CaseCard title="Tutela laboral y despidos" text="Defensas y demandas por vulneración de derechos fundamentales y despidos indebidos." />
@@ -239,12 +263,7 @@ export default function Page() {
         title="WhatsApp"
       >
         {/* Ícono WhatsApp (SVG inline, color blanco) */}
-        <svg
-          viewBox="0 0 32 32"
-          aria-hidden="true"
-          className="h-7 w-7"
-          fill="currentColor"
-        >
+        <svg viewBox="0 0 32 32" aria-hidden="true" className="h-7 w-7" fill="currentColor">
           <path d="M19.11 17.39c-.3-.15-1.73-.85-2-.95s-.46-.15-.65.15-.75.95-.92 1.15-.34.22-.63.07a6.63 6.63 0 0 1-1.95-1.2 7.3 7.3 0 0 1-1.35-1.67c-.14-.23 0-.36.1-.5s.23-.27.34-.42a1.65 1.65 0 0 0 .22-.37.45.45 0 0 0 0-.42c0-.15-.64-1.56-.88-2.13s-.47-.5-.65-.5h-.55a1 1 0 0 0-.73.34 3.06 3.06 0 0 0-.96 2.27 5.31 5.31 0 0 0 1.11 2.84 12.12 12.12 0 0 0 4.64 4.18 15.86 15.86 0 0 0 1.58.58 3.8 3.8 0 0 0 1.74.11 2.83 2.83 0 0 0 1.86-1.31 2.33 2.33 0 0 0 .16-1.31c-.05-.08-.24-.15-.54-.3zM16.02 3.2A12.79 12.79 0 0 0 3.2 15.99a12.6 12.6 0 0 0 1.74 6.42L3 29l6.76-1.78a12.86 12.86 0 0 0 6.25 1.6h.01a12.79 12.79 0 0 0 12.79-12.79A12.72 12.72 0 0 0 16.02 3.2zm7.54 20.33a10.86 10.86 0 0 1-7.55 3.13h-.01a10.94 10.94 0 0 1-5.56-1.5l-.4-.24-4.01 1.05 1.07-3.91-.26-.4a10.93 10.93 0 0 1-1.68-5.81 10.88 10.88 0 0 1 18.57-7.68 10.73 10.73 0 0 1 3.15 7.54 10.85 10.85 0 0 1-3.32 7.22z" />
         </svg>
         <span className="sr-only">Abrir WhatsApp</span>
