@@ -60,7 +60,6 @@ export default function Page() {
                 </span>
               </h1>
 
-              {/* Párrafo resumido y justificado */}
               <p className="mt-4 text-slate-300 text-lg text-justify">
                 Representamos a personas y empresas en <strong>juicios laborales, administrativos, civiles y ejecutivos</strong>. 
                 También asesoramos en <strong>licitaciones públicas, constitución de sociedades y corretaje de propiedades</strong>. 
@@ -90,7 +89,6 @@ export default function Page() {
                   <div className="grid sm:grid-cols-2 gap-4">
                     <MiniFeature icon={<Gavel className="h-5 w-5" />} title="Derecho Laboral" text="Despidos, tutela de derechos fundamentales, prácticas antisindicales y negociación." />
                     <MiniFeature icon={<Building2 className="h-5 w-5" />} title="Derecho Administrativo" text="Sumarios, estatutos (APS, Docente, Asistentes), probidad y responsabilidad." />
-                    {/* Cambiado: Litigios Civiles y Ejecutivos */}
                     <MiniFeature icon={<Scale className="h-5 w-5" />} title="Litigios Civiles y Ejecutivos" text="Defensa en tribunales civiles; cobros ejecutivos, desalojos y medidas precautorias." />
                     <MiniFeature icon={<FileText className="h-5 w-5" />} title="Contratación Pública" text="Bases, licitaciones, impugnaciones y cumplimiento contractual." />
                     <MiniFeature icon={<Briefcase className="h-5 w-5" />} title="Empresas y Sociedades" text="Constitución, estatutos, actas y asesoría societaria." />
@@ -117,7 +115,6 @@ export default function Page() {
           <PracticeCard icon={<Building2 className="h-6 w-6" />} title="Derecho Administrativo" bullets={["Sumarios y vistas fiscales", "Estatutos: APS, Docente, Asistentes", "Probidad, incompatibilidades y sanciones", "Contraloría y recursos administrativos"]} />
           <PracticeCard icon={<FileText className="h-6 w-6" />} title="Contratación Pública" bullets={["Bases y anexos", "Evaluación y adjudicación", "Impugnaciones y reclamos", "Ejecución y término anticipado"]} />
           <PracticeCard icon={<Scale className="h-6 w-6" />} title="Litigación" bullets={["Juzgados del Trabajo", "Tribunales Contencioso-Adm.", "Recursos de protección", "SUSESO, DT y órganos fiscalizadores"]} />
-          {/* Cambiado: "Civil y Ejecutivo" (sin &) */}
           <PracticeCard
             icon={<Scale className="h-6 w-6" />}
             title="Civil y Ejecutivo"
@@ -152,29 +149,30 @@ export default function Page() {
             <div className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6 text-slate-300 space-y-3">
               <p className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
-                <a href="tel:+56961946929" className="hover:underline">+56 9 20437413</a>
+                <a href="tel:+56920437413" className="hover:underline">+56 9 2043 7413</a>
               </p>
+
               <p className="flex items-center gap-2">
-  <Mail className="h-4 w-4" />
-  <a href="mailto:cernayasociados.cl@gmail.com" className="hover:underline text-blue-400">
-    cernayasociados.cl@gmail.com
-  </a>
-</p>
+                <Mail className="h-4 w-4" />
+                <a href="mailto:cernayasociados.cl@gmail.com" className="hover:underline text-blue-400">
+                  cernayasociados.cl@gmail.com
+                </a>
+              </p>
 
               <p className="flex items-center gap-2">
                 <MessageCircle className="h-4 w-4" />
                 <a
-                  href="https://wa.me/56961946929?text=Hola%20Cerna%20%26%20Asociados%2C%20necesito%20asesor%C3%ADa"
+                  href="https://wa.me/56920437413?text=Hola%20Cerna%20%26%20Asociados%2C%20necesito%20asesor%C3%ADa%20legal."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-400 hover:underline"
                 >
-                  WhatsApp: +56 9 6194 6929
+                  WhatsApp: +56 9 2043 7413
                 </a>
               </p>
+
               <p className="flex items-center gap-2"><MapPin className="h-4 w-4" /> Rancagua / Chile (online y presencial)</p>
               <p className="flex items-center gap-2"><Clock className="h-4 w-4" /> L–V 09:00 a 18:00</p>
-              {/* Corregido: "Sujeto" con mayúscula */}
               <p className="text-sm text-slate-400">Sujeto a secreto profesional.</p>
             </div>
           </div>
@@ -211,7 +209,7 @@ export default function Page() {
                 </button>
                 <a
                   className="inline-flex items-center gap-2 rounded-2xl border border-slate-700 px-4 py-2 text-sm font-medium text-slate-200 hover:bg-slate-900/60 transition"
-                  href="https://wa.me/56961946929?text=Hola%20Cerna%20%26%20Asociados%2C%20necesito%20asesor%C3%ADa"
+                  href="https://wa.me/56920437413?text=Hola%20Cerna%20%26%20Asociados%2C%20necesito%20asesor%C3%ADa%20legal."
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -254,9 +252,12 @@ export default function Page() {
             <p className="text-slate-200 font-medium">Contacto</p>
             <p className="flex items-center gap-2">
               <Phone className="h-4 w-4" />
-              <a href="tel:+56961946929" className="hover:underline">+56 9 6194 6929</a>
+              <a href="tel:+56920437413" className="hover:underline">+56 9 2043 7413</a>
             </p>
-            <p className="flex items-center gap-2"><Mail className="h-4 w-4" /> alexis.arancibia.c@gmail.com</p>
+            <p className="flex items-center gap-2">
+              <Mail className="h-4 w-4" />
+              <a href="mailto:cernayasociados.cl@gmail.com" className="hover:underline">cernayasociados.cl@gmail.com</a>
+            </p>
           </div>
         </div>
         <div className="py-6 text-center text-xs text-slate-500 border-t border-slate-800">
@@ -266,14 +267,13 @@ export default function Page() {
 
       {/* ===== BOTÓN FLOTANTE WHATSAPP ===== */}
       <a
-        href="https://wa.me/56961946929?text=Hola%2C%20quiero%20hacer%20una%20consulta"
+        href="https://wa.me/56920437413?text=Hola%2C%20quiero%20hacer%20una%20consulta"
         className="fixed bottom-5 right-5 h-14 w-14 rounded-full bg-[#25D366] text-white shadow-lg flex items-center justify-center hover:bg-[#128C7E] focus:outline-none focus:ring-2 focus:ring-white/30 transition-colors"
         target="_blank"
         rel="noopener"
         aria-label="Escríbenos por WhatsApp"
         title="WhatsApp"
       >
-        {/* Ícono WhatsApp (SVG inline, color blanco) */}
         <svg viewBox="0 0 32 32" aria-hidden="true" className="h-7 w-7" fill="currentColor">
           <path d="M19.11 17.39c-.3-.15-1.73-.85-2-.95s-.46-.15-.65.15-.75.95-.92 1.15-.34.22-.63.07a6.63 6.63 0 0 1-1.95-1.2 7.3 7.3 0 0 1-1.35-1.67c-.14-.23 0-.36.1-.5s.23-.27.34-.42a1.65 1.65 0 0 0 .22-.37.45.45 0 0 0 0-.42c0-.15-.64-1.56-.88-2.13s-.47-.5-.65-.5h-.55a1 1 0 0 0-.73.34 3.06 3.06 0 0 0-.96 2.27 5.31 5.31 0 0 0 1.11 2.84 12.12 12.12 0 0 0 4.64 4.18 15.86 15.86 0 0 0 1.58.58 3.8 3.8 0 0 0 1.74.11 2.83 2.83 0 0 0 1.86-1.31 2.33 2.33 0 0 0 .16-1.31c-.05-.08-.24-.15-.54-.3zM16.02 3.2A12.79 12.79 0 0 0 3.2 15.99a12.6 12.6 0 0 0 1.74 6.42L3 29l6.76-1.78a12.86 12.86 0 0 0 6.25 1.6h.01a12.79 12.79 0 0 0 12.79-12.79A12.72 12.72 0 0 0 16.02 3.2zm7.54 20.33a10.86 10.86 0 0 1-7.55 3.13h-.01a10.94 10.94 0 0 1-5.56-1.5l-.4-.24-4.01 1.05 1.07-3.91-.26-.4a10.93 10.93 0 0 1-1.68-5.81 10.88 10.88 0 0 1 18.57-7.68 10.73 10.73 0 0 1 3.15 7.54 10.85 10.85 0 0 1-3.32 7.22z" />
         </svg>
