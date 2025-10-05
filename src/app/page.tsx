@@ -141,7 +141,7 @@ export default function Page() {
               <h2 className="text-3xl font-bold tracking-tight">Sobre nosotros</h2>
               <p className="mt-3 text-slate-300">
                 Somos un equipo en crecimiento con experiencia en Laboral, Administrativo, Contratación Pública y Societario.
-                Integramos <strong>corretaje de propiedades</strong> con acompañamiento legal desde la promesa hasta la compraventa.
+                Integramos <strong>Corretaje de Propiedades</strong> con acompañamiento legal desde la promesa hasta la compraventa.
               </p>
               <div className="mt-6 grid sm:grid-cols-3 gap-4">
                 <Stat number="10+" label="Años de experiencia" />
@@ -152,9 +152,15 @@ export default function Page() {
             <div className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6 text-slate-300 space-y-3">
               <p className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
-                <a href="tel:+56961946929" className="hover:underline">+56 9 6194 6929</a>
+                <a href="tel:+56961946929" className="hover:underline">+56 9 20437413</a>
               </p>
-              <p className="flex items-center gap-2"><Mail className="h-4 w-4" /> alexis.arancibia.c@gmail.com</p>
+              <p className="flex items-center gap-2">
+  <Mail className="h-4 w-4" />
+  <a href="mailto:cernayasociados.cl@gmail.com" className="hover:underline text-blue-400">
+    cernayasociados.cl@gmail.com
+  </a>
+</p>
+
               <p className="flex items-center gap-2">
                 <MessageCircle className="h-4 w-4" />
                 <a
