@@ -7,20 +7,18 @@ import {
   ShieldCheck, Home, Briefcase,
 } from 'lucide-react';
 
-/** Logo oficial (reconocible) de WhatsApp como SVG inline */
+/** Logo oficial de WhatsApp (versión optimizada y más gruesa) */
 function WhatsAppIcon({ className }: { className?: string }) {
   return (
     <svg
       className={className}
       viewBox="0 0 24 24"
-      role="img"
       aria-hidden="true"
-      focusable="false"
+      role="img"
     >
-      {/* handset (blanco) que usa la mayoría de kits oficiales dentro del círculo verde */}
       <path
         fill="currentColor"
-        d="M19.05 17.54c-.27-.13-1.6-.79-1.85-.88-.25-.09-.43-.13-.61.13-.18.27-.7.88-.85 1.06-.16.18-.31.2-.58.07-.27-.13-1.14-.42-2.17-1.35-.8-.71-1.34-1.58-1.5-1.85-.16-.27-.02-.41.11-.54.11-.11.27-.29.4-.43.13-.14.18-.23.27-.38.09-.18.04-.33-.02-.46-.07-.13-.61-1.47-.84-2.02-.22-.52-.45-.45-.61-.46-.16-.01-.33-.01-.51-.01-.18 0-.46.07-.7.33-.25.27-.92.9-.92 2.2 0 1.3.95 2.55 1.08 2.73.13.18 1.87 2.86 4.52 4.01.63.27 1.12.43 1.5.55.63.2 1.2.17 1.65.1.5-.07 1.6-.65 1.83-1.28.22-.63.22-1.17.16-1.28-.06-.11-.25-.18-.52-.31z"
+        d="M15.97 13.92c-.22-.1-1.28-.63-1.48-.7-.2-.07-.34-.1-.48.1-.14.2-.55.7-.67.84-.13.14-.24.16-.46.06-.22-.1-.9-.34-1.72-1.15-.64-.6-1.06-1.35-1.2-1.58-.13-.23-.02-.35.09-.46.09-.09.22-.24.32-.35.1-.12.14-.19.22-.31.07-.15.03-.26-.01-.36-.05-.1-.49-1.25-.68-1.71-.18-.44-.38-.38-.51-.38-.13 0-.28 0-.43 0s-.39.06-.59.28c-.21.23-.77.77-.77 1.88 0 1.11.79 2.18.89 2.33.11.15 1.58 2.44 3.82 3.42.53.23.95.37 1.27.47.53.17 1.02.14 1.39.08.43-.06 1.35-.55 1.55-1.09.19-.54.19-.99.14-1.08-.05-.1-.21-.15-.44-.26z"
       />
     </svg>
   );
@@ -176,88 +174,6 @@ export default function Page() {
         </div>
       </section>
 
-      {/* ÁREAS */}
-      <section id="areas" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="max-w-3xl">
-          <h2 className="text-3xl font-bold tracking-tight">Áreas de práctica</h2>
-          <p className="mt-3 text-slate-300">
-            Experiencia en mundo del trabajo, sector público, litigios civiles y ejecutivos,
-            y servicios legales integrales en Chile.
-          </p>
-        </div>
-
-        <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <PracticeCard
-            icon={<Gavel className="h-6 w-6" />}
-            title="Laboral: individual y colectivo"
-            bullets={[
-              'Despidos y cobros',
-              'Tutela de derechos (Ley Karin)',
-              'Reglamento interno y jornadas',
-              'Negociación colectiva',
-            ]}
-          />
-          <PracticeCard
-            icon={<Building2 className="h-6 w-6" />}
-            title="Derecho Administrativo"
-            bullets={[
-              'Sumarios y vistas fiscales',
-              'Estatutos (APS, Docente, Asistentes)',
-              'Probidad e incompatibilidades',
-              'Contraloría y recursos',
-            ]}
-          />
-          <PracticeCard
-            icon={<FileText className="h-6 w-6" />}
-            title="Contratación Pública"
-            bullets={[
-              'Bases y anexos',
-              'Evaluación y adjudicación',
-              'Impugnaciones y reclamos',
-              'Ejecución y término anticipado',
-            ]}
-          />
-        </div>
-      </section>
-
-      {/* SOBRE NOSOTROS */}
-      <section id="sobre" className="border-y border-slate-800 bg-slate-900/40">
-        <div className="mx-auto grid max-w-7xl items-start gap-8 px-4 py-16 sm:px-6 lg:grid-cols-3 lg:px-8">
-          <div className="lg:col-span-2">
-            <h2 className="text-3xl font-bold tracking-tight">Sobre nosotros</h2>
-            <p className="mt-3 text-slate-300">
-              Somos un equipo con experiencia en Laboral, Administrativo, Contratación Pública y
-              Societario. Integramos el Corretaje de Propiedades con acompañamiento legal desde la promesa hasta la
-              compraventa.
-            </p>
-            <div className="mt-6 grid gap-4 sm:grid-cols-3">
-              <Stat number="10+" label="Años de experiencia" />
-              <Stat number="300+" label="Escritos y presentaciones" />
-              <Stat number="100%" label="Transparencia y ética" />
-            </div>
-          </div>
-
-          <div className="space-y-3 rounded-3xl border border-slate-800 bg-slate-900/60 p-6 text-slate-300">
-            <p className="flex items-center gap-2">
-              <Phone className="h-4 w-4" />
-              <a href="tel:+56920437413" className="hover:underline">+56 9 2043 7413</a>
-            </p>
-            <p className="flex items-center gap-2">
-              <Mail className="h-4 w-4" />
-              <a href="mailto:cernayasociados.cl@gmail.com" className="text-blue-400 hover:underline">
-                cernayasociados.cl@gmail.com
-              </a>
-            </p>
-            <p className="flex items-center gap-2">
-              <MapPin className="h-4 w-4" /> Rancagua / Chile (online y presencial)
-            </p>
-            <p className="flex items-center gap-2">
-              <Clock className="h-4 w-4" /> L–V 09:00 a 18:00
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* CONTACTO */}
       <section id="contacto" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-2">
@@ -275,7 +191,7 @@ export default function Page() {
                 className="relative flex items-center justify-center gap-2 rounded-2xl bg-[#25D366] px-5 py-3 font-medium text-white transition hover:bg-[#128C7E] animate-[pulse_2s_ease-in-out_infinite]"
               >
                 <span className="pointer-events-none absolute inset-0 -z-10 rounded-2xl bg-[#25D366]/30 blur-xl" />
-                <WhatsAppIcon className="h-5 w-5" /> WhatsApp
+                <WhatsAppIcon className="h-6 w-6" /> WhatsApp
               </a>
 
               <a
@@ -333,7 +249,7 @@ export default function Page() {
         </div>
       </footer>
 
-      {/* BOTÓN FLOTANTE WHATSAPP (glow + ping) */}
+      {/* BOTÓN FLOTANTE WHATSAPP */}
       <a
         href="https://wa.me/56920437413?text=Hola%2C%20quiero%20hacer%20una%20consulta"
         target="_blank"
@@ -344,7 +260,7 @@ export default function Page() {
       >
         <span className="pointer-events-none absolute inset-0 -z-10 rounded-full bg-[#25D366]/30 blur-xl" />
         <span className="pointer-events-none absolute inset-0 -z-10 rounded-full ring-2 ring-[#25D366]/40 animate-[ping_1.8s_ease-in-out_infinite]" />
-        <WhatsAppIcon className="h-7 w-7" />
+        <WhatsAppIcon className="h-8 w-8" />
       </a>
     </div>
   );
@@ -394,4 +310,3 @@ function Stat({ number, label }: StatProps) {
     </div>
   );
 }
-
