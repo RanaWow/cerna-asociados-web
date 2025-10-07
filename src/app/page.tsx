@@ -60,11 +60,6 @@ export default function Page() {
                 </span>
               </h1>
 
-              <p className="mt-4 text-slate-300 text-lg text-justify">
-                Representamos a personas y empresas en <strong>juicios laborales, administrativos, civiles y ejecutivos</strong>.
-                También asesoramos en <strong>licitaciones públicas, constitución de sociedades y corretaje de propiedades</strong>.
-                Nuestro compromiso: <strong>respuestas oportunas, estrategia sólida y acompañamiento cercano</strong>.
-              </p>
 
               <div className="mt-6 flex flex-wrap gap-3">
                 <a href="#contacto" className="inline-flex items-center rounded-2xl bg-blue-500 px-4 py-2 text-sm font-medium hover:bg-blue-600 transition">
