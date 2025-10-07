@@ -56,7 +56,7 @@ export default function Page() {
               <h1 className="text-4xl sm:text-5xl font-bold leading-tight tracking-tight">
                 Tu defensa y asesoría legal con confianza y resultados
                 <span className="block text-blue-400">
-                  Laboral · Administrativo · Societario · Civil y Ejecutivo · Corretaje
+                  Laboral · Administrativo · Societario · Civil y Ejecutivo · Licitaciones Públicas · Corretaje
                 </span>
               </h1>
 
@@ -183,10 +183,8 @@ export default function Page() {
               Contáctanos de la forma más rápida. Estamos disponibles por WhatsApp o correo electrónico:
             </p>
 
-            {/* NUEVO BLOQUE DE CONTACTO CON EFECTO PULSANTE */}
             <div className="space-y-4 mt-6">
               <div className="flex flex-col sm:flex-row gap-4">
-                {/* Botón de WhatsApp con efecto “latido” */}
                 <a
                   href="https://wa.me/56920437413?text=Hola%20Cerna%20%26%20Asociados%2C%20quisiera%20hacer%20una%20consulta%20legal."
                   target="_blank"
@@ -196,7 +194,6 @@ export default function Page() {
                   <MessageCircle className="h-5 w-5" /> WhatsApp
                 </a>
 
-                {/* Botón de correo electrónico */}
                 <a
                   href="mailto:cernayasociados.cl@gmail.com?subject=Consulta%20Legal&body=Hola%2C%20quisiera%20asesor%C3%ADa%20en..."
                   className="flex items-center justify-center gap-2 bg-blue-500 hover:bg-blue-600 text-white rounded-2xl px-5 py-3 font-medium transition"
@@ -258,14 +255,28 @@ export default function Page() {
       {/* ===== BOTÓN FLOTANTE WHATSAPP ===== */}
       <a
         href="https://wa.me/56920437413?text=Hola%2C%20quiero%20hacer%20una%20consulta"
-        className="fixed bottom-5 right-5 h-14 w-14 rounded-full bg-[#25D366] text-white shadow-lg flex items-center justify-center hover:bg-[#128C7E] focus:outline-none focus:ring-2 focus:ring-white/30 transition-colors"
+        className="group fixed bottom-5 right-5 z-50 h-14 w-14 rounded-full bg-[#25D366] text-white shadow-xl flex items-center justify-center
+                   hover:bg-[#128C7E] focus:outline-none focus:ring-2 focus:ring-white/30
+                   transition-transform duration-200 hover:scale-105"
         target="_blank"
         rel="noopener"
         aria-label="Escríbenos por WhatsApp"
         title="WhatsApp"
       >
-        {/* Ícono WhatsApp */}
-        <svg viewBox="0 0 32 32" aria-hidden="true" className="h-7 w-7" fill="currentColor">
+        {/* halo suave */}
+        <span
+          aria-hidden
+          className="absolute inset-0 rounded-full bg-[#25D366]/40 blur-md opacity-80
+                     motion-safe:animate-pulse"
+        />
+        {/* onda/ping */}
+        <span
+          aria-hidden
+          className="absolute h-full w-full rounded-full ring-2 ring-[#25D366]/60
+                     motion-safe:animate-ping"
+        />
+        {/* ícono */}
+        <svg viewBox="0 0 32 32" aria-hidden="true" className="relative h-7 w-7" fill="currentColor">
           <path d="M19.11 17.39c-.3-.15-1.73-.85-2-.95s-.46-.15-.65.15-.75.95-.92 1.15-.34.22-.63.07a6.63 6.63 0 0 1-1.95-1.2 7.3 7.3 0 0 1-1.35-1.67c-.14-.23 0-.36.1-.5s.23-.27.34-.42a1.65 1.65 0 0 0 .22-.37.45.45 0 0 0 0-.42c0-.15-.64-1.56-.88-2.13s-.47-.5-.65-.5h-.55a1 1 0 0 0-.73.34 3.06 3.06 0 0 0-.96 2.27 5.31 5.31 0 0 0 1.11 2.84 12.12 12.12 0 0 0 4.64 4.18 15.86 15.86 0 0 0 1.58.58 3.8 3.8 0 0 0 1.74.11 2.83 2.83 0 0 0 1.86-1.31 2.33 2.33 0 0 0 .16-1.31c-.05-.08-.24-.15-.54-.3zM16.02 3.2A12.79 12.79 0 0 0 3.2 15.99a12.6 12.6 0 0 0 1.74 6.42L3 29l6.76-1.78a12.86 12.86 0 0 0 6.25 1.6h.01a12.79 12.79 0 0 0 12.79-12.79A12.72 12.72 0 0 0 16.02 3.2zm7.54 20.33a10.86 10.86 0 0 1-7.55 3.13h-.01a10.94 10.94 0 0 1-5.56-1.5l-.4-.24-4.01 1.05 1.07-3.91-.26-.4a10.93 10.93 0 0 1-1.68-5.81 10.88 10.88 0 0 1 18.57-7.68 10.73 10.73 0 0 1 3.15 7.54 10.85 10.85 0 0 1-3.32 7.22z" />
         </svg>
         <span className="sr-only">Abrir WhatsApp</span>
@@ -326,3 +337,4 @@ function Stat({ number, label }: { number: string; label: string }) {
     </div>
   );
 }
+
