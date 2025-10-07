@@ -4,8 +4,27 @@ import type { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import {
   Scale, Gavel, Building2, FileText, Phone, Mail, MapPin, Clock,
-  ShieldCheck, ArrowRight, MessageCircle, Home, Briefcase,
+  ShieldCheck, Home, Briefcase,
 } from 'lucide-react';
+
+/** Logo oficial (reconocible) de WhatsApp como SVG inline */
+function WhatsAppIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      role="img"
+      aria-hidden="true"
+      focusable="false"
+    >
+      {/* handset (blanco) que usa la mayoría de kits oficiales dentro del círculo verde */}
+      <path
+        fill="currentColor"
+        d="M19.05 17.54c-.27-.13-1.6-.79-1.85-.88-.25-.09-.43-.13-.61.13-.18.27-.7.88-.85 1.06-.16.18-.31.2-.58.07-.27-.13-1.14-.42-2.17-1.35-.8-.71-1.34-1.58-1.5-1.85-.16-.27-.02-.41.11-.54.11-.11.27-.29.4-.43.13-.14.18-.23.27-.38.09-.18.04-.33-.02-.46-.07-.13-.61-1.47-.84-2.02-.22-.52-.45-.45-.61-.46-.16-.01-.33-.01-.51-.01-.18 0-.46.07-.7.33-.25.27-.92.9-.92 2.2 0 1.3.95 2.55 1.08 2.73.13.18 1.87 2.86 4.52 4.01.63.27 1.12.43 1.5.55.63.2 1.2.17 1.65.1.5-.07 1.6-.65 1.83-1.28.22-.63.22-1.17.16-1.28-.06-.11-.25-.18-.52-.31z"
+      />
+    </svg>
+  );
+}
 
 export default function Page() {
   return (
@@ -58,7 +77,6 @@ export default function Page() {
                 <span className="text-blue-400">confianza y resultados</span>
               </h1>
 
-              {/* Chips (móvil ordenado, sin guiones sueltos) */}
               <ul className="mt-5 flex flex-wrap gap-2">
                 {[
                   'Laboral',
@@ -77,7 +95,6 @@ export default function Page() {
                 ))}
               </ul>
 
-              {/* Párrafo principal (si quieres eliminar, borra este <p>) */}
               <p className="mt-6 max-w-xl text-slate-300">
                 Representamos a personas y empresas en juicios laborales, administrativos,
                 civiles y ejecutivos. También asesoramos en licitaciones, sociedades y
@@ -258,7 +275,7 @@ export default function Page() {
                 className="relative flex items-center justify-center gap-2 rounded-2xl bg-[#25D366] px-5 py-3 font-medium text-white transition hover:bg-[#128C7E] animate-[pulse_2s_ease-in-out_infinite]"
               >
                 <span className="pointer-events-none absolute inset-0 -z-10 rounded-2xl bg-[#25D366]/30 blur-xl" />
-                <MessageCircle className="h-5 w-5" /> WhatsApp
+                <WhatsAppIcon className="h-5 w-5" /> WhatsApp
               </a>
 
               <a
@@ -327,7 +344,7 @@ export default function Page() {
       >
         <span className="pointer-events-none absolute inset-0 -z-10 rounded-full bg-[#25D366]/30 blur-xl" />
         <span className="pointer-events-none absolute inset-0 -z-10 rounded-full ring-2 ring-[#25D366]/40 animate-[ping_1.8s_ease-in-out_infinite]" />
-        <MessageCircle className="h-7 w-7" />
+        <WhatsAppIcon className="h-7 w-7" />
       </a>
     </div>
   );
@@ -377,3 +394,4 @@ function Stat({ number, label }: StatProps) {
     </div>
   );
 }
+
